@@ -59,7 +59,7 @@ public class DormScoreAdvancedInfoActivity extends NavBarActivity{
         SeniorScore seniorScore = null;
         try {
         	seniorScore = SeniorScore.fromJson(getIntent().getStringExtra("Jsonscore"));
-			if (seniorScore==null) { //无人
+			if (seniorScore==null||seniorScore.getResultCode().equals("0")||seniorScore.getSeniorResultCount()==0) { //无人
 				new AlertDialog.Builder(this)    
 		        .setTitle("提示")
 		        .setMessage("该寝室暂时无考核信息。")  

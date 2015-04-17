@@ -103,13 +103,8 @@ public class DormScoreAdvancedActivity extends NavBarActivity {
  			@Override
  			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
  				if(spnYear.getSelectedItemPosition()==0){
- 				  // getCurrentWeekTask() ;
- 				  String[] weeks = new String[week];
-                  weeks[0]=""+week;
-                 
-                  ArrayAdapter<String> adpWeek = new ArrayAdapter<String>(DormScoreAdvancedActivity.this, android.R.layout.simple_spinner_item, weeks);
-                  adpWeek.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                  spnWeek.setAdapter(adpWeek);
+ 				   getCurrentWeekTask() ;
+
                   spnWeek.setSelection(0);
  	            }
  				else{
@@ -124,14 +119,12 @@ public class DormScoreAdvancedActivity extends NavBarActivity {
  	                ArrayAdapter<String> adpweek = new ArrayAdapter<String>(DormScoreAdvancedActivity.this, android.R.layout.simple_spinner_item, weekss);
      	            adpweek.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
      	            spnWeek.setAdapter(adpweek);
-/* 					String strsMajor[] = new String[]{"未指定"};
+					String strsMajor[] = new String[]{"未指定"};
              	    ArrayAdapter<String> adpMajor = new ArrayAdapter<String>(DormScoreAdvancedActivity.this, android.R.layout.simple_spinner_item, strsMajor);
               		adpMajor.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-              		spnMajor.setAdapter(adpMajor);*/
+              		spnMajor.setAdapter(adpMajor);
               		spnGrade.setSelection(0);
-              		spnMajor.setSelection(0);
-
-              		
+              		spnMajor.setSelection(0);              		
               		spnClass.setSelection(0);
  	            }
  			
@@ -225,10 +218,30 @@ public class DormScoreAdvancedActivity extends NavBarActivity {
  		spnMajor.setOnItemSelectedListener(new OnItemSelectedListener() {
  			@Override
  			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+ 					
+ 			}
+ 			@Override
+ 			public void onNothingSelected(AdapterView<?> parent) {
+ 			}
+ 		});
+ 		spnWeek.setOnItemSelectedListener(new OnItemSelectedListener() {
+ 			@Override
+ 			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+ 					
+ 			}
+ 			@Override
+ 			public void onNothingSelected(AdapterView<?> parent) {
+ 			}
+ 		});
+ 		
+ 		spnGrade.setOnItemSelectedListener(new OnItemSelectedListener() {
+ 			@Override
+ 			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
  				if (spnMajor.getSelectedItemPosition() != 0) {
 					
-					getClassByConditionTask();
-				}	
+ 					getClassByConditionTask();
+				}
+ 				
  			}
  			@Override
  			public void onNothingSelected(AdapterView<?> parent) {
@@ -289,10 +302,10 @@ public class DormScoreAdvancedActivity extends NavBarActivity {
 	 * 通过条件获取班级
 	 */
 	public void getClassByConditionTask() {	
-		if(spnGrade.getSelectedItemId()==0){
+		if(spnGrade.getSelectedItemId()==0&&spnMajor.getSelectedItemId()==0){
 			new AlertDialog.Builder(DormScoreAdvancedActivity.this)    
             .setTitle("提示")  
-            .setMessage("您必须指定一个学年!")  
+            .setMessage("您必须指定一个学年和专业!")  
             .setPositiveButton("确定", null)
             .show(); 
 			spnMajor.setSelection(0);
@@ -372,6 +385,7 @@ public class DormScoreAdvancedActivity extends NavBarActivity {
         ArrayAdapter<String> adpWeek = new ArrayAdapter<String>(DormScoreAdvancedActivity.this, android.R.layout.simple_spinner_item, weeks);
         adpWeek.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spnWeek.setAdapter(adpWeek);
+        spnWeek.setSelection(0);
     }
     /**
 	 * 通过学院获取专业
@@ -531,6 +545,14 @@ public class DormScoreAdvancedActivity extends NavBarActivity {
 	                .show();
 	            	return;
     			}
+    			 if (seniorScore.getResultCode().equals("0")) {
+                       new AlertDialog.Builder(DormScoreAdvancedActivity.this)    
+                       .setTitle("提示")  
+                       .setMessage("没有寝室考核成绩数据。\n可能的原因是：\n该寝室该周未进行检查无数据\n或者该寝室未使用。")  
+                       .setPositiveButton("确定",null)
+                       .show();
+                       return;
+                   }
                 //访问成功
                 Intent intent = new Intent();
                 intent.putExtra("Week", spnWeek.getSelectedItem().toString());

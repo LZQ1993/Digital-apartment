@@ -288,9 +288,9 @@ some parent container.
         public static final int dorm_score_spn_ScoreLevel=0x7f0a0070;
         public static final int dorm_score_spn_class=0x7f0a0075;
         public static final int dorm_score_spn_college=0x7f0a0072;
-        public static final int dorm_score_spn_grade=0x7f0a0073;
+        public static final int dorm_score_spn_grade=0x7f0a0074;
         public static final int dorm_score_spn_level=0x7f0a006e;
-        public static final int dorm_score_spn_major=0x7f0a0074;
+        public static final int dorm_score_spn_major=0x7f0a0073;
         public static final int dorm_score_spn_type=0x7f0a006f;
         public static final int dorm_score_spn_user=0x7f0a0071;
         public static final int dorm_score_spn_week=0x7f0a006c;

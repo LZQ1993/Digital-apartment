@@ -51,7 +51,7 @@ public class DormScoreInfoActivity extends NavBarActivity{
         PrimaryScore primaryScore = null;
 		try {
 			primaryScore = PrimaryScore.fromJson(getIntent().getStringExtra("josnScore"));
-			if (primaryScore.getResultCode().equals("0")) { //无人
+			if (primaryScore==null||primaryScore.getResultCode().equals("0")||primaryScore.getPrimaryResultCount()==0) { //无人
 				new AlertDialog.Builder(this)    
 		        .setTitle("提示")
 		        .setMessage("该寝室暂时无考核信息。")  
