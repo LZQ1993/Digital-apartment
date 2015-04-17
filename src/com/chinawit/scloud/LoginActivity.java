@@ -111,10 +111,18 @@ public class LoginActivity extends NavBarActivity{
                  dismissProgressDialog();
                  User user = null;
                  try {
+                   if(content.equals("登录失败")){
+                	   new AlertDialog.Builder(LoginActivity.this)    
+                       .setTitle("提示")  
+                       .setMessage("设备码不存在或用户不存在")  
+                       .setPositiveButton("确定",null)
+                       .show();
+                       return;
+                   }
                    if(content.equals("密码错误")){
                 	   new AlertDialog.Builder(LoginActivity.this)    
                        .setTitle("提示")  
-                       .setMessage("登录失败")  
+                       .setMessage("密码错误")  
                        .setPositiveButton("确定",null)
                        .show();
                        return;
