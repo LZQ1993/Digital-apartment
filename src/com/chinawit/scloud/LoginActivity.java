@@ -114,7 +114,7 @@ public class LoginActivity extends NavBarActivity{
                    if(content.equals("登录失败")){
                 	   new AlertDialog.Builder(LoginActivity.this)    
                        .setTitle("提示")  
-                       .setMessage("设备码不存在或用户不存在")  
+                       .setMessage("设备码错误或用户不存在")  
                        .setPositiveButton("确定",null)
                        .show();
                        return;
