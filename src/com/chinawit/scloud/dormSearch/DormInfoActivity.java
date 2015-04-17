@@ -98,8 +98,8 @@ public class DormInfoActivity extends NavBarActivity{
 		            	RoomMate mate = dormInfo.getRoomMate().get(n);
 		                View itemView = inflater.inflate(R.layout.activity_dorm_info_lv_mates_item, null);
 		                //初始化子布局
-		                TextView tvBed = (TextView) itemView.findViewById(R.id.dorm_info_lv_mates_item_tv_bed);
-		                tvBed.setText(mate.getStudentBedNum());
+		              /*  TextView tvBed = (TextView) itemView.findViewById(R.id.dorm_info_lv_mates_item_tv_bed);
+		                tvBed.setText(mate.getStudentBedNum());*/
 		                TextView tvName = (TextView) itemView.findViewById(R.id.dorm_info_lv_mates_item_tv_name);
 		                tvName.setText(mate.getStudentName());      
 		                TextView tvPost = (TextView) itemView.findViewById(R.id.dorm_info_lv_mates_item_tv_post);

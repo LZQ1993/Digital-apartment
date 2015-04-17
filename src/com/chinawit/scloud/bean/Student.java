@@ -207,6 +207,7 @@ public class Student {
 	public void setAbbreviation(String abbreviation) {
 		Abbreviation = abbreviation;
 	}
+
 	public String toJson() {
 		return JsonUtil.toJson(this);
 	}
