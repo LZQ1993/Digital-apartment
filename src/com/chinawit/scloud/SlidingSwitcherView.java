@@ -16,12 +16,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-public class SlidingSwitcherView extends RelativeLayout implements OnTouchListener {
+public class SlidingSwitcherView extends RelativeLayout {
 
-	/**
+/*	*//**
 	 * 让菜单滚动，手指滑动需要达到的速度。
-	 */
-	public static final int SNAP_VELOCITY = 200;
+	 *//*
+	public static final int SNAP_VELOCITY = 200;*/
 
 	/**
 	 * SlidingSwitcherView的宽度。
@@ -56,18 +56,18 @@ public class SlidingSwitcherView extends RelativeLayout implements OnTouchListen
 
 	/**
 	 * 记录手指按下时的横坐标。
-	 */
+	 *//*
 	private float xDown;
 
-	/**
+	*//**
 	 * 记录手指移动时的横坐标。
-	 */
+	 *//*
 	private float xMove;
 
-	/**
+	*//**
 	 * 记录手机抬起时的横坐标。
-	 */
-	private float xUp;
+	 *//*
+	private float xUp;*/
 
 	/**
 	 * 菜单布局。
@@ -88,11 +88,11 @@ public class SlidingSwitcherView extends RelativeLayout implements OnTouchListen
 	 * 菜单中第一个元素的布局，用于改变leftMargin的值，来决定当前显示的哪一个元素。
 	 */
 	private MarginLayoutParams firstItemParams;
-
-	/**
+/*
+	*//**
 	 * 用于计算手指滑动的速度。
-	 */
-	private VelocityTracker mVelocityTracker;
+	 *//*
+	private VelocityTracker mVelocityTracker;*/
 
 	/**
 	 * 重写SlidingSwitcherView的构造函数，用于允许在XML中引用当前的自定义布局。
@@ -122,6 +122,7 @@ public class SlidingSwitcherView extends RelativeLayout implements OnTouchListen
 	 */
 	public void scrollToPrevious() {
 		new ScrollTask().execute(20);
+		
 	}
 
 	/**
@@ -149,6 +150,7 @@ public class SlidingSwitcherView extends RelativeLayout implements OnTouchListen
 						@Override
 						public void run() {
 							scrollToFirstItem();
+							
 							refreshDotsLayout();
 						}
 					});
@@ -192,7 +194,7 @@ public class SlidingSwitcherView extends RelativeLayout implements OnTouchListen
 			MarginLayoutParams params = (MarginLayoutParams) item.getLayoutParams();
 			params.width = switcherViewWidth;
 			item.setLayoutParams(params);
-			item.setOnTouchListener(this);
+			//item.setOnTouchListener(this);
 		}
 		leftEdge = borders[itemsCount - 1];
 		firstItem = itemsLayout.getChildAt(0);
@@ -207,7 +209,7 @@ public class SlidingSwitcherView extends RelativeLayout implements OnTouchListen
 		refreshDotsLayout();
 	}
 
-	@Override
+	/*@Override
 	public boolean onTouch(View v, MotionEvent event) {
 		createVelocityTracker(event);
 		switch (event.getAction()) {
@@ -250,7 +252,7 @@ public class SlidingSwitcherView extends RelativeLayout implements OnTouchListen
 			break;
 		}
 		return false;
-	}
+	}*/
 
 	/**
 	 * 当前是否能够滚动，滚动到第一个或最后一个元素时将不能再滚动。
@@ -266,39 +268,39 @@ public class SlidingSwitcherView extends RelativeLayout implements OnTouchListen
 	 * 
 	 * @return 当前手势想滚动到上一个菜单元素返回true，否则返回false。
 	 */
-	private boolean wantScrollToPrevious() {
+/*	private boolean wantScrollToPrevious() {
 		return xUp - xDown > 0;
 	}
 
-	/**
+	*//**
 	 * 判断当前手势的意图是不是想滚动到下一个菜单元素。如果手指移动的距离是负数，则认为当前手势是想要滚动到下一个菜单元素。
 	 * 
 	 * @return 当前手势想滚动到下一个菜单元素返回true，否则返回false。
-	 */
+	 *//*
 	private boolean wantScrollToNext() {
 		return xUp - xDown < 0;
 	}
-
+*/
 	/**
 	 * 判断是否应该滚动到下一个菜单元素。如果手指移动距离大于屏幕的1/2，或者手指移动速度大于SNAP_VELOCITY，
 	 * 就认为应该滚动到下一个菜单元素。
 	 * 
 	 * @return 如果应该滚动到下一个菜单元素返回true，否则返回false。
 	 */
-	private boolean shouldScrollToNext() {
+/*	private boolean shouldScrollToNext() {
 		return xDown - xUp > switcherViewWidth / 2 || getScrollVelocity() > SNAP_VELOCITY;
 	}
 
-	/**
+	*//**
 	 * 判断是否应该滚动到上一个菜单元素。如果手指移动距离大于屏幕的1/2，或者手指移动速度大于SNAP_VELOCITY，
 	 * 就认为应该滚动到上一个菜单元素。
 	 * 
 	 * @return 如果应该滚动到上一个菜单元素返回true，否则返回false。
-	 */
+	 *//*
 	private boolean shouldScrollToPrevious() {
 		return xUp - xDown > switcherViewWidth / 2 || getScrollVelocity() > SNAP_VELOCITY;
 	}
-
+*/
 	/**
 	 * 刷新标签元素布局，每次currentItemIndex值改变的时候都应该进行刷新。
 	 */
@@ -329,31 +331,31 @@ public class SlidingSwitcherView extends RelativeLayout implements OnTouchListen
 	 * @param event
 	 *            右侧布局监听控件的滑动事件
 	 */
-	private void createVelocityTracker(MotionEvent event) {
+/*	private void createVelocityTracker(MotionEvent event) {
 		if (mVelocityTracker == null) {
 			mVelocityTracker = VelocityTracker.obtain();
 		}
 		mVelocityTracker.addMovement(event);
 	}
 
-	/**
+	*//**
 	 * 获取手指在右侧布局的监听View上的滑动速度。
 	 * 
 	 * @return 滑动速度，以每秒钟移动了多少像素值为单位。
-	 */
+	 *//*
 	private int getScrollVelocity() {
 		mVelocityTracker.computeCurrentVelocity(1000);
 		int velocity = (int) mVelocityTracker.getXVelocity();
 		return Math.abs(velocity);
 	}
 
-	/**
+	*//**
 	 * 回收VelocityTracker对象。
-	 */
+	 *//*
 	private void recycleVelocityTracker() {
 		mVelocityTracker.recycle();
 		mVelocityTracker = null;
-	}
+	}*/
 
 	/**
 	 * 检测菜单滚动时，是否有穿越border，border的值都存储在{@link #borders}中。
