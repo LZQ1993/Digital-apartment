@@ -185,7 +185,7 @@ public class DormScoreShowActivity extends NavBarActivity{
 	    
 	    StringBuffer sbremark = new StringBuffer();
         
-	   sbremark.append("备注：");
+	   sbremark.append("备注：\n");
 	   if(!(dormScore.getIIIegalContext().equals("无")) ||dormScore.getOtherContext()!=null||dormScore.getReMark()!=null)
 	   {
 		   if(!(dormScore.getIIIegalContext().equals("无"))) sbremark.append(dormScore.getIIIegalContext());

@@ -133,7 +133,7 @@ public class DormCheckBeginActivity extends NavBarActivity {
      * 打开二维码
      */
     public void onQrcode(View view) {
-    	if(0<Integer.valueOf(UserInfo.getUser().getPower())&&Integer.valueOf(UserInfo.getUser().getPower())<3){
+    	if(0<Integer.valueOf(UserInfo.getUser().getPower())){
     		new AlertDialog.Builder(this)
             .setTitle("提示")
             .setMessage("您要打开二维码扫描界面吗？")
@@ -190,7 +190,7 @@ public class DormCheckBeginActivity extends NavBarActivity {
      * 打开手动输入
      */
     public void onManual(View view) {
-    	if(0<Integer.valueOf(UserInfo.getUser().getPower())&&Integer.valueOf(UserInfo.getUser().getPower())<3){
+    	if(0<Integer.valueOf(UserInfo.getUser().getPower())){
     		 showDormNubmerInputDialog();
     	}else{
     		 new AlertDialog.Builder(DormCheckBeginActivity.this)    

@@ -504,7 +504,7 @@ public class RegisterActivity extends NavBarActivity {
                     if(content.equals("1")){
                     	new AlertDialog.Builder(RegisterActivity.this)    
     	                .setTitle("提示")  
-    	                .setMessage("注册成功")  
+    	                .setMessage("注册成功"+ "\n" +"请于管理员联系激活")  
     	                .setPositiveButton("确定",new OnClickListener() {
     	                    @Override
     	                    public void onClick(DialogInterface dialog, int which) {

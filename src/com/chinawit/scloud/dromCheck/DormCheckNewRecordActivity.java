@@ -116,7 +116,7 @@ public class DormCheckNewRecordActivity extends NavBarActivity {
         //初始化床位缓冲
         mateAdds = new String[dorm.getRoomMateCount()];
         for (int n = 0; n < mateAdds.length; n++) {
-         mateAdds[n] = "(" + dorm.getRoomMate().get(n).getStudentBedNum() + "号床) " + dorm.getRoomMate().get(n).getStudentName();
+         mateAdds[n] = dorm.getRoomMate().get(n).getStudentName();
         }
         
         bedAdds = new boolean[dorm.getRoomMateCount()];
@@ -290,7 +290,7 @@ public class DormCheckNewRecordActivity extends NavBarActivity {
                 }
             } else {
                 new AlertDialog.Builder(DormCheckNewRecordActivity.this)
-                .setTitle("请选择【床铺】不合格的床位号")
+                .setTitle("请选择不合格【床铺】学生姓名")
                 .setMultiChoiceItems(mateAdds, bedAdds, new OnMultiChoiceClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int position, boolean bool) {
