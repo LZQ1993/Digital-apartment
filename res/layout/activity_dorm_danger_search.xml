@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFFFF"
+     >
+    
+	<!-- 添加导航 -->
+    <include layout="@layout/activity_nav_bar"/>
+         
+    <!-- 提示 -->
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="请输入查询隐患的条件"
+        android:textColor="#FF000000"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:background="#FFEEEEEE"
+        />
+    
+        <!-- 内容 滚屏滑动框架 -->
+	<ScrollView
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent" >
+ 	<LinearLayout
+		android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:paddingTop="10dp"
+		android:paddingBottom="10dp"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		>
+    <!-- 条件 -->
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+		android:paddingBottom="10dp"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+        >
+        
+	    <!-- 隐患类型 -->
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_marginTop="10dp"
+	        android:gravity="center_vertical"
+	        >
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+			    android:text="隐患类型："
+				android:textColor="#FF2784ea"
+				android:textSize="16sp"
+				/>
+		    <Spinner
+				android:id="@+id/dorm_danger_search_type_spn"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:entries="@array/dangerSearchType"
+				style="@android:style/Widget.Holo.Light.Spinner"
+				/>
+	    </LinearLayout>
+	   
+	    <!-- 隐患地点 -->
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:orientation="horizontal"
+	        android:layout_marginTop="10dp"
+	        android:gravity="center_vertical"
+	        >
+			<TextView 
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+			    android:text="隐患地点："
+		 		android:textColor="#FF2784ea"
+				android:textSize="16sp"
+				/>
+		    <Spinner
+				android:id="@+id/dorm_danger_search_place_spn"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:entries="@array/dangerBuildings"
+				style="@android:style/Widget.Holo.Light.Spinner"
+				/>
+	    </LinearLayout>
+         <!-- 隐患状态 -->
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_weight="1"
+	        android:layout_marginTop="10dp"
+	        android:gravity="center_vertical"
+	        >
+			<TextView 
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+			    android:text="隐患状态："
+				android:textColor="#FF2784ea"
+				android:textSize="16sp"
+				/>
+		    <Spinner
+				android:id="@+id/dorm_danger_search_state_spn"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:entries="@array/dangerStatue"
+				style="@android:style/Widget.Holo.Light.Spinner"
+				/>
+	    </LinearLayout>
+    </LinearLayout>
+   	    <!-- 内容布局 -->
+	    <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:paddingLeft="10dip"
+		    android:paddingRight="10dip"
+		    android:orientation="vertical"
+		    android:focusable="true"  
+   			android:focusableInTouchMode="true"
+		    >
+			<!-- 输入框 -->
+			<EditText
+			    android:id="@+id/dorm_danger_search_keyWords_edt"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:hint="请输入关键字"
+			    android:inputType="textMultiLine"
+			    android:gravity="top"
+			    android:textSize="16sp"
+			    android:maxLength="300"
+			    android:minLines="4"
+			    />
+			</LinearLayout>
+      <!-- 提交按钮 -->
+		<Button
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+		    android:layout_marginRight="20dp"
+			android:layout_marginLeft="20dp"
+			android:layout_marginTop="30dp"
+			android:text="查询"		
+			android:background="@drawable/button"
+			android:textColor="#FF2784ea"	
+			android:onClick="dangerSearch" />	
+
+       </LinearLayout>
+       </ScrollView>
+</LinearLayout>

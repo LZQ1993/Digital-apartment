@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" 
+    android:background="#FFFFFFFF" >
+    
+    <!-- 添加导航 -->
+    <include layout="@layout/activity_nav_bar"/>
+    
+    <!-- 导航 -->
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    >
+	    <Button
+	        android:id="@+id/dorm_search_main_btn_tab01"
+			android:layout_width="0dp"
+	    	android:layout_height="wrap_content"
+	    	android:layout_weight="1"
+	    	android:paddingTop="14dp"
+	    	android:paddingBottom="14dp"
+	    	android:text="模糊查询"
+	    	android:textColor="#FFFFFFFF"
+	    	android:textSize="18sp"
+	    	android:gravity="center"
+	    	android:background="#FF2784ea"
+	        />
+	    <Button
+	        android:id="@+id/dorm_search_main_btn_tab02"
+			android:layout_width="0dp"
+	    	android:layout_height="wrap_content"
+	    	android:layout_weight="1"
+		    android:paddingTop="14dp"
+		    android:paddingBottom="14dp"
+	    	android:text="精确查询"
+	    	android:textColor="#FF2784ea"
+	    	android:textSize="18sp"
+	    	android:gravity="center"
+	    	android:background="#FFFFFFFF"
+	        />
+	</LinearLayout>
+
+    <!-- 分页 -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/dorm_search_main_vPager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" 
+        />
+
+</LinearLayout>
+
+

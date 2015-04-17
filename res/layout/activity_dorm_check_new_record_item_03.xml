@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#FFFFFFFF" >
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@+id/dorm_exam_new_record_item_04_frame_top"
+		android:layout_above="@+id/dorm_exam_new_record_item_04_frame_bottom"
+		android:orientation="vertical"
+		android:layout_marginTop="10dp"
+		android:background="#11000000"
+		>
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="30dip"
+			android:paddingLeft="20dip"
+			android:gravity="center_vertical"
+			android:textSize="16sp"
+			android:textColor="#FFFFFFFF"
+			android:background="#FF555555"
+			android:text="备注"
+			/>
+		<EditText
+		    android:id="@+id/dorm_exam_new_record_edt_remarks"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_margin="5dp"
+			android:hint="请在这里填写备注信息"
+			android:inputType="textMultiLine"
+			android:gravity="top"
+			android:textSize="16sp"
+			android:maxLength="300"
+			/>
+	</LinearLayout>
+
+	<LinearLayout
+	    android:id="@+id/dorm_exam_new_record_item_04_frame_bottom"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:padding="5dp"
+		android:orientation="horizontal"
+		android:background="#FF555555"
+		>
+		<Button
+			android:text="提交记录"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:onClick="onSubmit"
+			android:background="@drawable/button"
+			android:textColor="#FF2784ea"
+			/> 
+	</LinearLayout>
+
+	<LinearLayout
+	    android:id="@+id/dorm_exam_new_record_item_04_frame_top"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentTop="true"
+	    android:background="#11000000"
+	    android:orientation="vertical" >
+
+	    <TextView
+	        android:layout_width="match_parent"
+	        android:layout_height="30dip"
+	        android:background="#FF555555"
+	        android:gravity="center_vertical"
+	        android:paddingLeft="20dip"
+	        android:text="附加信息"
+	        android:textColor="#FFFFFFFF"
+	        android:textSize="16sp" />
+
+	    <TextView
+	        android:id="@+id/dorm_exam_new_record_tv_infoadd"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dp"
+	        android:padding="10dp"
+	        android:text="无"
+	        android:textColor="#FF000000"
+	        android:textSize="16sp" />
+
+	    <TextView
+	        android:layout_width="match_parent"
+	        android:layout_height="30dip"
+	        android:background="#FF555555"
+	        android:gravity="center_vertical"
+	        android:paddingLeft="20dip"
+	        android:text="是否有违规行为"
+	        android:textColor="#FFFFFFFF"
+	        android:textSize="16sp" />
+
+	    	<RadioGroup 
+				android:id="@+id/dorm_exam_new_record_rg_iIIegal" 
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="20dp"
+				android:layout_marginRight="20dp"
+				android:orientation="vertical"
+			 	>
+				<RadioButton
+					android:id="@+id/dorm_exam_new_record_rg_iIIegal_01"
+					android:layout_width="match_parent"
+					android:layout_height="0dp"
+					android:layout_weight="1"
+					android:text="否" 
+					android:checked="true"
+					android:textColor="#FF000000" 
+					/>
+				<RadioButton
+					android:id="@+id/dorm_exam_new_record_rg_iIIegal_02"
+					android:layout_width="match_parent"
+					android:layout_height="0dp"
+					android:layout_weight="1"
+					android:text="是" 
+					android:textColor="#FF000000" 
+					/>	
+			</RadioGroup>	
+			
+	    <EditText
+		    android:id="@+id/dorm_exam_new_record_edt_iIIegal"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_margin="5dp"
+			android:hint="如有其他违规，请说明"
+			android:inputType="textMultiLine"
+			android:gravity="top"
+			android:textSize="16sp"
+			android:maxLength="50"
+			/>
+	</LinearLayout>
+				
+</RelativeLayout>
+

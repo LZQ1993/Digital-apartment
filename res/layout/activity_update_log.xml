@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="#FFFFFFFF" >
+    
+    <!-- 添加导航 -->
+    <include layout="@layout/activity_nav_bar"/>
+    
+	<!-- 滚屏滑动框架 -->
+	<ScrollView
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:paddingTop="20dp"
+	    android:paddingBottom="20dp"
+	    >
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:paddingLeft="20dp"
+	        android:paddingRight="20dp"
+	        android:orientation="vertical"
+	        >
+	        
+	        <!-- Logo部分 -->
+			<ImageView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:background="@drawable/main_logo"
+			    />
+	        <TextView
+	            android:id="@+id/update_log_tv"
+		    	android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="日志内容"
+	        	android:textSize="16sp"
+	        	android:textColor="#FF000000"
+	            />
+	        
+	    </LinearLayout> 
+	</ScrollView>
+
+</LinearLayout>
+
+

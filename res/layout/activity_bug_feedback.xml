@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFFFF"
+    >
+    
+    <!-- 添加导航 -->
+    <include layout="@layout/activity_nav_bar"/>
+    
+    <!-- 内容 滚屏滑动框架 -->
+	<ScrollView
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent" >
+	    
+	    <!-- 内容布局 -->
+	    <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:paddingLeft="10dip"
+		    android:paddingRight="10dip"
+		    android:orientation="vertical"
+		    android:focusable="true"  
+   			android:focusableInTouchMode="true"
+		    >
+			<TextView 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_margin="4dip"
+			    android:text="您要反馈的问题："
+			    android:textColor="#FF2784ea"
+			    android:textSize="18sp"
+			    />
+			
+			<!-- 问题输入框 -->
+			<EditText
+			    android:id="@+id/bug_feedback_edt_bug"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:hint="请输入您要反馈的问题，我们将以此为动力不断改进"
+			    android:inputType="textMultiLine"
+			    android:gravity="top"
+			    android:textSize="16sp"
+			    android:maxLength="300"
+			    android:minLines="4"
+			    />
+	
+			<TextView 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_margin="4dip"
+			    android:text="您的电子邮箱："
+			   android:textColor="#FF2784ea"
+			    android:textSize="18sp"
+			    />
+			
+			<!-- 邮件输入框 -->
+			<EditText
+			    android:id="@+id/bug_feedback_edt_email"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:hint="可选填写，以便解决问题后给您回复"
+			    android:inputType="textEmailAddress"
+			    android:textSize="16sp"
+			    />
+			
+			<!-- 提交按钮 -->
+			<Button
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dip"
+				android:text="提交"
+				android:background="@drawable/button"
+				android:textColor="#FF2784ea"
+				android:onClick="onSubmit"
+				/>
+			
+			<TextView 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:text="为了更好地解决您的问题，我们将会采集您的手机配置，但不涉及其他任何隐私信息。如果您已同意，请点击“提交”上传反馈。"
+			    android:textSize="14sp"
+			    android:textColor="#FF2784ea"
+			    />		
+	
+		</LinearLayout>
+		
+	</ScrollView>
+	
+</LinearLayout>
+

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#FFFFFFFF">
+    
+    <!-- 添加导航 -->
+    <include layout="@layout/activity_nav_bar"/>
+
+    <!-- 提示 -->
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="请您组合以下条件进行搜索"
+        android:textColor="#FF000000"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+	    android:background="#FFEEEEEE"
+        />
+
+    <!-- 条件 -->
+    
+        <!-- 内容 滚屏滑动框架 -->
+	<ScrollView
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent" >
+ 	<LinearLayout
+		android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:paddingTop="10dp"
+		android:paddingBottom="10dp"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		>
+    
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="考核周次："
+                android:textColor="#FF2784ea"
+                android:textSize="16sp"
+                />
+            <Spinner
+                android:id="@+id/dorm_score_spn_week"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@android:style/Widget.Holo.Light.Spinner"
+                />
+        </LinearLayout>
+        
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_marginTop="15dp"
+	        android:gravity="center_vertical"
+	        >
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+			    android:text="考核时间："
+				android:textColor="#FF2784ea"
+				android:textSize="16sp"
+				/>
+		    <Spinner
+				android:id="@+id/dorm_score_spn_year"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				style="@android:style/Widget.Holo.Light.Spinner"
+				/>
+	    </LinearLayout>
+
+
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            >
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="考核级别："
+                android:textColor="#FF2784ea"
+                android:textSize="16sp"
+                />
+            <Spinner
+                android:id="@+id/dorm_score_spn_level"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/dormExamLevel"
+                style="@android:style/Widget.Holo.Light.Spinner"
+                />
+        </LinearLayout>
+        
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_marginTop="15dp"
+	        android:gravity="center_vertical"
+	        >
+			<TextView 
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+			    android:text="考核类型："
+				android:textColor="#FF2784ea"
+				android:textSize="16sp"
+				/>
+		    <Spinner
+				android:id="@+id/dorm_score_spn_type"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:entries="@array/dormExamType"
+				style="@android:style/Widget.Holo.Light.Spinner"
+				/>
+	    </LinearLayout>
+	   <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_marginTop="15dp"
+	        android:gravity="center_vertical"
+	        >
+			<TextView 
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+			    android:text="考核等级："
+				android:textColor="#FF2784ea"
+				android:textSize="16sp"
+				/>
+		    <Spinner
+				android:id="@+id/dorm_score_spn_ScoreLevel"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:entries="@array/dormYouChar"
+				style="@android:style/Widget.Holo.Light.Spinner"
+				/>
+	    </LinearLayout>
+	   <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_marginTop="15dp"
+	        android:gravity="center_vertical"
+	        >
+
+		   <TextView 
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+			    android:text="查看所带班级："
+				android:textColor="#FF2784ea"
+				android:textSize="16sp"
+				/>
+		    <Spinner
+				android:id="@+id/dorm_score_spn_user"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:entries="@array/dormUser"
+				style="@android:style/Widget.Holo.Light.Spinner"
+				/>
+    
+
+	    </LinearLayout>
+	    
+	      <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_marginTop="15dp"
+	        android:gravity="center_vertical"
+	        >
+
+		   <TextView 
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+			    android:text="考核学院："
+				android:textColor="#FF2784ea"
+				android:textSize="16sp"
+				/>
+		    <Spinner
+				android:id="@+id/dorm_score_spn_college"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:entries="@array/dormCollege"
+				style="@android:style/Widget.Holo.Light.Spinner"
+				/>
+		    </LinearLayout>
+	<LinearLayout 
+	        android:layout_height="wrap_content"
+	        android:layout_width="match_parent"
+	        android:orientation="horizontal"
+	        android:layout_marginTop="15dp"
+	        android:gravity="center_vertical"
+	        >
+		   <TextView 
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+			    android:text="考核年级："
+				android:textColor="#FF2784ea"
+				android:textSize="16sp"
+				/>
+		    <Spinner
+				android:id="@+id/dorm_score_spn_grade"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				style="@android:style/Widget.Holo.Light.Spinner"
+				/>
+    
+    
+		   </LinearLayout>
+		<LinearLayout 
+	        android:layout_height="wrap_content"
+	        android:layout_width="match_parent"
+	        android:orientation="horizontal"
+	        android:layout_marginTop="15dp"
+	        android:gravity="center_vertical"
+	        >
+		   <TextView 
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+			    android:text="考核专业："
+				android:textColor="#FF2784ea"
+				android:textSize="16sp"
+				/>
+		    <Spinner
+				android:id="@+id/dorm_score_spn_major"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				style="@android:style/Widget.Holo.Light.Spinner"
+				/>
+		   </LinearLayout>
+		<LinearLayout 
+	        android:layout_height="wrap_content"
+	        android:layout_width="match_parent"
+	        android:orientation="horizontal"
+	        android:layout_marginTop="15dp"
+	        android:gravity="center_vertical"
+	        >
+		   <TextView 
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+			    android:text="考核班级："
+				android:textColor="#FF2784ea"
+				android:textSize="16sp"
+				/>
+		    <Spinner
+				android:id="@+id/dorm_score_spn_class"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				style="@android:style/Widget.Holo.Light.Spinner"
+				/>
+		   </LinearLayout>
+	
+	 <!-- 查询按钮 -->
+    <Button
+        android:text="查询"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/button"
+		android:textColor="#FF2784ea"
+        android:onClick="onSubmit"
+        />
+  </LinearLayout>   
+</ScrollView>
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#FFFFFFFF" >
+    
+    <!-- 添加导航 -->
+    <include layout="@layout/activity_nav_bar"/>
+	
+	<!-- 分页 -->
+	<android.support.v4.view.ViewPager
+		android:id="@+id/dorm_exam_new_record_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" 
+        >
+        <android.support.v4.view.PagerTabStrip
+	        android:layout_width="wrap_content"  
+	        android:layout_height="wrap_content"
+ 			android:layout_gravity="top"
+ 			android:background="#FF0077FF"	        
+ 			/>
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

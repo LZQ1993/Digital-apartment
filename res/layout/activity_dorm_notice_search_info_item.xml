@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+
+	
+	<LinearLayout
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:baselineAligned="false"
+    	android:orientation="vertical">
+		
+	    
+	 	<LinearLayout
+	    	android:layout_width="match_parent"
+	    	android:layout_height="wrap_content"
+	    	android:layout_marginTop="10dp"
+	    	android:layout_weight="1"
+	    	android:orientation="vertical">
+	    	
+			<LinearLayout
+		    	android:layout_width="match_parent"
+		    	android:layout_height="wrap_content"
+		    	android:orientation="horizontal"
+		    	android:layout_marginLeft="10dp"
+		    	android:gravity="bottom">
+				
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingRight="10dp"
+					android:text="所属学院:"
+					android:textSize="16sp"
+					android:textColor="#FF555555"
+					android:gravity="left" />
+				
+				<TextView
+				    android:id="@+id/dorm_notice_search_info_lv_item_tv_college"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:paddingTop="10dp"
+				    android:text="00"
+				    android:textColor="#FF000000"
+				    android:textSize="16sp"
+				    android:singleLine="true"
+				    android:gravity="left" />
+		    </LinearLayout>  
+	 	 
+			<LinearLayout
+		    	android:layout_width="match_parent"
+		    	android:layout_height="wrap_content"
+		    	android:orientation="horizontal"
+		    	android:layout_marginLeft="10dp"
+		    	android:gravity="bottom">
+				
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingRight="10dp"
+					android:text="通知内容:"
+					android:textSize="16sp"
+					android:textColor="#FF555555"
+					android:gravity="left" />
+				
+				<TextView
+				    android:id="@+id/dorm_notice_search_info_lv_item_tv_descroption"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:paddingTop="10dp"
+				    android:text="00"
+				    android:textColor="#FF000000"
+				    android:textSize="16sp"
+				    android:singleLine="true"
+				    android:gravity="left" />
+		    </LinearLayout>    
+	    </LinearLayout>
+			<LinearLayout
+		    	android:layout_width="match_parent"
+		    	android:layout_height="wrap_content"
+		    	android:orientation="horizontal"
+		    	android:layout_marginLeft="10dp"
+		    	android:gravity="bottom">
+				
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingRight="10dp"
+					android:text="通知状态:"
+					android:textSize="16sp"
+					android:textColor="#FF555555"
+					android:gravity="left" />
+				
+				<TextView
+				    android:id="@+id/dorm_notice_search_info_lv_item_tv_state"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:paddingTop="10dp"
+				    android:text="00"
+				    android:textColor="#FF000000"
+				    android:textSize="16sp"
+				    android:singleLine="true"
+				    android:gravity="left" />
+		    </LinearLayout>    
+		<LinearLayout
+		    	android:layout_width="match_parent"
+		    	android:layout_height="wrap_content"
+		    	android:orientation="horizontal"
+		    	android:layout_marginLeft="10dp"
+		    	android:gravity="bottom">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingRight="10dp"
+					android:text="截止时间:"
+					android:textSize="16sp"
+					android:textColor="#FF555555"
+					android:gravity="left" />
+				
+				<TextView
+					android:id="@+id/dorm_notice_search_info_lv_item_tv_endTime"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:paddingTop="10dp"
+				    android:text="无"
+				    android:textColor="#FF000000"
+				    android:textSize="16sp"
+				    android:singleLine="true"
+				    android:gravity="left" />
+		    </LinearLayout>
+	 
+ 	 </LinearLayout>
+</LinearLayout>

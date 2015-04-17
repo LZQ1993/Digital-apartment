@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffffff" >
+    
+    
+	<!-- 添加导航 -->
+    <include layout="@layout/activity_nav_bar"/>
+    
+   <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            			
+			<!-- userType -->
+			<RelativeLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="15dp"
+				android:layout_marginRight="15dp"
+				android:layout_marginTop="10dp"
+				>
+				<Spinner
+					android:id="@+id/register_edt_userType"
+					android:layout_width="match_parent"
+					android:layout_height="50dp" 
+					android:paddingLeft="70sp"
+					android:saveEnabled="true"
+					android:entries="@array/userType"
+					style="@android:style/Widget.Holo.Light.Spinner"
+					/>
+				<ImageView
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_alignParentLeft="true"
+				    android:layout_centerVertical="true"
+				    android:layout_marginLeft="14dp"
+				    android:background="@drawable/usertype"
+				    android:gravity="center_vertical" 
+				    />				
+			</RelativeLayout>
+			<!-- account -->
+			<RelativeLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="15dp"
+				android:layout_marginRight="15dp"
+				android:layout_marginTop="5dp"
+				>
+				<EditText
+					android:id="@+id/register_edt_account"
+					android:layout_width="match_parent"
+					android:layout_height="50dp" 
+					android:paddingLeft="70sp"
+					android:inputType="textPersonName"
+					android:hint="用户名"
+					android:saveEnabled="true"
+					/>
+		
+				<ImageView
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_alignParentLeft="true"
+				    android:layout_centerVertical="true"
+				    android:layout_marginLeft="14dp"
+				    android:background="@drawable/account"
+				    android:gravity="center_vertical" />
+			</RelativeLayout>
+        	<!-- password1 -->
+			<RelativeLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="15dp"
+				android:layout_marginRight="15dp"
+				android:layout_marginTop="5dp"
+				>
+				<EditText
+					android:id="@+id/register_edt_password1"
+					android:layout_width="match_parent"
+					android:layout_height="50dp" 
+					android:paddingLeft="70sp"
+					android:hint="用户密码"
+					android:inputType="textPassword"
+					android:saveEnabled="true"
+					/>
+		
+				<ImageView
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_alignParentLeft="true"
+				    android:layout_centerVertical="true"
+				    android:layout_marginLeft="14dp"
+				    android:background="@drawable/password"
+				    android:gravity="center_vertical" />
+			</RelativeLayout>
+			
+		    <!-- password2 -->
+			<RelativeLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="15dp"
+				android:layout_marginRight="15dp"
+				android:layout_marginTop="5dp"
+				>
+				<EditText
+					android:id="@+id/register_edt_password2"
+					android:layout_width="match_parent"
+					android:layout_height="50dp"
+					android:inputType="textPassword" 
+					android:paddingLeft="70sp"
+					android:hint="确认密码"
+					android:saveEnabled="true"
+					/>
+		
+				<ImageView
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_alignParentLeft="true"
+				    android:layout_centerVertical="true"
+				    android:layout_marginLeft="14dp"
+				    android:background="@drawable/password"
+				    android:gravity="center_vertical" />
+			</RelativeLayout>
+		     <!-- realName -->
+			<RelativeLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="15dp"
+				android:layout_marginRight="15dp"
+				android:layout_marginTop="5dp"
+				>
+				<EditText
+					android:id="@+id/register_edt_realName"
+					android:layout_width="match_parent"
+					android:layout_height="50dp" 
+					android:inputType="textPersonName"
+					android:paddingLeft="70sp"
+					android:hint="真实姓名"
+					android:saveEnabled="true"
+					/>
+		
+				<ImageView
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_alignParentLeft="true"
+				    android:layout_centerVertical="true"
+				    android:layout_marginLeft="14dp"
+				    android:background="@drawable/realname"
+				    android:gravity="center_vertical" />
+			</RelativeLayout>
+			
+			<!-- tel -->
+			<RelativeLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="15dp"
+				android:layout_marginRight="15dp"
+				android:layout_marginTop="5dp"
+				>
+				<EditText
+					android:id="@+id/register_edt_tel"
+					android:layout_width="match_parent"
+					android:layout_height="50dp" 
+					android:inputType="textPersonName"
+					android:paddingLeft="70sp"
+					android:hint="手机号码"
+					android:saveEnabled="true"
+					/>
+		
+				<ImageView
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_alignParentLeft="true"
+				    android:layout_centerVertical="true"
+				    android:layout_marginLeft="14dp"
+				    android:background="@drawable/tel"
+				    android:gravity="center_vertical" />
+		
+			</RelativeLayout>
+			<!-- college -->
+			<RelativeLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="15dp"
+				android:layout_marginRight="15dp"
+				android:layout_marginTop="5dp"
+				>
+				<Spinner
+					android:id="@+id/register_edt_college"
+					android:layout_width="match_parent"
+					android:layout_height="50dp" 
+					android:paddingLeft="70sp"
+					android:saveEnabled="true"
+					style="@android:style/Widget.Holo.Light.Spinner"
+					/>
+				<ImageView
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_alignParentLeft="true"
+				    android:layout_centerVertical="true"
+				    android:layout_marginLeft="14dp"
+				    android:background="@drawable/college"
+				    android:gravity="center_vertical" />
+		
+			</RelativeLayout>
+			
+			<!-- major -->
+			<RelativeLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="15dp"
+				android:layout_marginRight="15dp"
+				android:layout_marginTop="5dp"
+				>
+				<Spinner
+					android:id="@+id/register_edt_major"
+					android:layout_width="match_parent"
+					android:layout_height="50dp" 
+					android:paddingLeft="70sp"
+					android:saveEnabled="true"
+					style="@android:style/Widget.Holo.Light.Spinner"
+					/>
+				<ImageView
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_alignParentLeft="true"
+				    android:layout_centerVertical="true"
+				    android:layout_marginLeft="14dp"
+				    android:background="@drawable/major"
+				    android:gravity="center_vertical" 
+				    />				
+			</RelativeLayout>
+			
+			<!-- year -->
+			<RelativeLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="15dp"
+				android:layout_marginRight="15dp"
+				android:layout_marginTop="5dp"
+				>
+				<Spinner
+					android:id="@+id/register_edt_year"
+					android:layout_width="match_parent"
+					android:layout_height="50dp" 
+					android:paddingLeft="70sp"
+					android:saveEnabled="true"
+					style="@android:style/Widget.Holo.Light.Spinner"
+					/>
+				<ImageView
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_alignParentLeft="true"
+				    android:layout_centerVertical="true"
+				    android:layout_marginLeft="14dp"
+				    android:background="@drawable/year"
+				    android:gravity="center_vertical" 
+				    />
+			</RelativeLayout>
+			
+			<!-- classAbb -->
+			<RelativeLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="15dp"
+				android:layout_marginRight="15dp"
+				android:layout_marginTop="5dp"
+				>
+				<Spinner
+					android:id="@+id/register_edt_classAbb"
+					android:layout_width="match_parent"
+					android:layout_height="50dp" 
+					android:paddingLeft="70sp"
+					android:saveEnabled="true"
+					style="@android:style/Widget.Holo.Light.Spinner"
+					/>
+				<ImageView
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_alignParentLeft="true"
+				    android:layout_centerVertical="true"
+				    android:layout_marginLeft="14dp"
+				    android:background="@drawable/classabb"
+				    android:gravity="center_vertical" 
+				    />
+			</RelativeLayout>
+			
+			<Button
+				android:layout_width="match_parent"
+				android:layout_height="50dip"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+				android:layout_marginTop="5dp"
+				android:layout_marginBottom="10dp"
+				android:background="@drawable/button"
+				android:textColor="#FF2784ea"
+				android:text="注册"
+				android:onClick="submit"
+				/>
+	</LinearLayout>
+</ScrollView>
+</LinearLayout>

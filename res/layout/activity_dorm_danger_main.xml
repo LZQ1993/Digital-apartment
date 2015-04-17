@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#FFFFFFFF">
+    
+	<!-- 添加导航 -->
+    <include layout="@layout/activity_nav_bar"/>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="3dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal" >
+
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:padding="5dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:onClick="dangerSearch"
+            
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dorm_danger_search"
+                android:scaleType="fitCenter"
+                />
+ 
+        </LinearLayout>
+        <LinearLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="0dp"
+		    android:layout_weight="1"
+		    android:layout_margin="3dp"
+		    android:padding="5dp"
+		    android:orientation="vertical"
+		    android:gravity="center"
+		  
+		    android:onClick="dangerSubmit"
+		    >
+		    <ImageView
+		        android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+				android:src="@drawable/dorm_danger_submit"
+				android:scaleType="fitCenter"
+				/>
+				
+		</LinearLayout>
+    </LinearLayout>
+</LinearLayout>

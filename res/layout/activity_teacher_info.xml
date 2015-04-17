@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" 
+    android:background="#FFFFFFFF">
+    
+    <!-- 添加导航 -->
+    <include layout="@layout/activity_nav_bar"/>
+    
+    <!-- 滚屏滑动框架 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:paddingBottom="20dip"
+	        android:orientation="vertical"
+	        >
+	             
+	        <!-- 基本信息 -->
+	        <TextView
+	            android:layout_width="match_parent"
+	            android:layout_height="30dip"
+	            android:layout_marginBottom="5dip"
+                android:paddingLeft="20dip"
+	            android:gravity="center_vertical"
+	            android:textSize="16sp"
+	            android:textColor="#FF000000"
+              android:background="#FFEEEEEE"
+	            android:text="基本信息"
+                />
+	
+            <TextView
+                android:id="@+id/teacher_info_tv_base"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="姓名: 张三"
+                android:textSize="20sp"
+                android:textColor="#FF000000"
+                />
+            
+            
+            <!-- 联系方式 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dip"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="5dip"
+                android:paddingLeft="20dip"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:textColor="#FF000000"
+              android:background="#FFEEEEEE"
+                android:text="联系信息"
+                />
+	            
+            <TextView
+                android:id="@+id/teacher_info_tv_tel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="电话"
+                android:textSize="20sp"
+                android:textColor="#FF000000"
+                />
+            
+            
+             <!-- 所带班级 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dip"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="5dip"
+                android:paddingLeft="20dip"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:textColor="#FF000000"
+              android:background="#FFEEEEEE"
+                android:text="所带班级"
+                />
+
+            <TextView
+                android:id="@+id/teacher_info_tv_class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="所带班级"
+                android:textSize="20sp"
+                android:textColor="#FF000000"
+                />
+
+        </LinearLayout> 
+    </ScrollView>
+
+</LinearLayout>
+

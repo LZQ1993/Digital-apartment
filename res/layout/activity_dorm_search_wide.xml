@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 提示 -->
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="请您组合以下条件进行搜索"
+        android:textColor="#FF000000"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+	    android:background="#FFEEEEEE"
+        />
+    
+    <!-- 条件 -->
+	<LinearLayout
+		android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:paddingTop="10dp"
+		android:paddingBottom="10dp"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		>
+    
+	    <!-- 学院 -->
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_marginTop="10dp"
+	        android:gravity="center_vertical"
+	        >
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+			    android:text="学院："
+				android:textColor="#FF2784ea"
+				android:textSize="16sp"
+				/>
+		    <Spinner
+				android:id="@+id/dorm_search_wide_spn_department"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				style="@android:style/Widget.Holo.Light.Spinner"
+				/>
+	    </LinearLayout>
+	   
+	    <!-- 专业 -->
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_marginTop="10dp"
+	        android:gravity="center_vertical"
+	        >
+			<TextView 
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+			    android:text="专业："
+				android:textColor="#FF2784ea"
+				android:textSize="16sp"
+				/>
+		    <Spinner
+				android:id="@+id/dorm_search_wide_spn_major"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				style="@android:style/Widget.Holo.Light.Spinner"
+				/>
+	    </LinearLayout>
+
+	    <!-- 年级 -->
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_marginTop="10dp"
+	        android:gravity="center_vertical"
+	        >
+			<TextView 
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+			    android:text="年级："
+				android:textColor="#FF2784ea"
+				android:textSize="16sp"
+				/>
+		    <Spinner
+				android:id="@+id/dorm_search_wide_spn_grade"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				style="@android:style/Widget.Holo.Light.Spinner"
+				/>
+	    </LinearLayout>
+	    
+	    <!-- 班级 -->
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_marginTop="10dp"
+	        android:gravity="center_vertical"
+	        >
+			<TextView 
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+			    android:text="班级："
+				android:textColor="#FF2784ea"
+				android:textSize="16sp"
+				/>
+		    <Spinner
+				android:id="@+id/dorm_search_wide_spn_classAbb"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				style="@android:style/Widget.Holo.Light.Spinner"
+				/>
+	    </LinearLayout>
+	    
+	</LinearLayout>
+    
+    <!-- 查询按钮 -->
+    <Button
+        android:text="查询"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/button"
+		android:textColor="#FF2784ea"
+        android:onClick="onSubmitWide"
+        />
+
+</LinearLayout>

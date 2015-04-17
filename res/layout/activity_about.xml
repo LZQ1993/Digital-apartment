@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFFFF"
+    >
+    
+    <!-- 添加导航 -->
+    <include 
+        android:id="@+id/about_nav"
+        android:layout_alignParentTop="true"
+        layout="@layout/activity_nav_bar"/>
+    
+	<!-- 中间 滚屏滑动框架 -->
+	<ScrollView
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+		android:layout_below="@+id/about_nav"
+		android:layout_above="@+id/about_tv_footer"
+	    >
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:padding="20dip"
+	        android:orientation="vertical"
+	        android:gravity="center_horizontal"
+	        >
+
+		    <!-- 软件图标 -->
+			<ImageView
+				android:src="@drawable/about_logo"
+				android:scaleType="fitCenter"
+			 	android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+			  	/>
+			
+			<!-- 版本号 -->
+			<TextView
+				android:id="@+id/about_tv_version"
+				android:layout_width="match_parent"
+		    	android:layout_height="wrap_content"
+		    	android:paddingTop="5dip"
+		    	android:paddingBottom="5dip"
+				android:gravity="center"
+				android:textSize="16sp"
+				android:textColor="#FF005d6e"
+				android:text="v 0.0.0"
+				/>
+	
+			<!-- 文字 -->
+			<TextView
+				android:id="@+id/about_tv_content"
+		     	android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+				android:paddingTop="10dip"
+				android:paddingBottom="10dip"
+				android:gravity="left"
+		      	android:textSize="18sp"
+		      	android:textColor="#FF005d6e"
+		       	android:text="关于页面的内容部分"
+		       	/>
+			
+            <!-- 欢迎页面 -->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickBtnWelcome"
+                android:background="@drawable/button"
+				android:textColor="#FF2784ea"
+                android:text="欢迎页面"
+                />
+			
+			<!-- 问题反馈 -->
+		 	<Button
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:onClick="onClickBtnBugFeedback"
+				android:background="@drawable/button"
+				android:textColor="#FF2784ea"
+				android:text="问题反馈"
+				/>
+		
+		</LinearLayout>
+	</ScrollView>
+		
+	<!-- 结尾 -->
+	<TextView
+		android:id="@+id/about_tv_footer"
+		android:layout_width="match_parent"
+    	android:layout_height="60dip"
+    	android:layout_alignParentBottom="true"
+    	android:paddingTop="4dip"
+    	android:paddingBottom="0dip"
+		android:gravity="center"
+		android:textSize="14sp"
+		android:textColor="#FFFFFFFF"
+		android:background="#FF666666"
+		android:text="关于页面的结尾部分"
+		/>
+		
+</RelativeLayout>
+

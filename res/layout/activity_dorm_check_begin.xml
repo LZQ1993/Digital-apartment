@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#FFFFFFFF" >
+    
+    <!-- 添加导航 -->
+    <include layout="@layout/activity_nav_bar"/>
+<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    >
+	    <Button
+	        android:id="@+id/dorm_check_begin_btn_tab01"
+			android:layout_width="0dp"
+	    	android:layout_height="wrap_content"
+	    	android:layout_weight="1"
+	    	android:paddingTop="14dp"
+	    	android:paddingBottom="14dp"
+	    	android:text="普查"
+	    	android:textColor="#FFFFFFFF"
+	    	android:textSize="18sp"
+	    	android:gravity="center"
+	    	android:background="#FF2784ea"
+	        />
+	    <Button
+	        android:id="@+id/dorm_check_begin_btn_tab02"
+			android:layout_width="0dp"
+	    	android:layout_height="wrap_content"
+	    	android:layout_weight="1"
+		    android:paddingTop="14dp"
+		    android:paddingBottom="14dp"
+	    	android:text="复查"
+	    	android:textColor="#FF2784ea"
+	    	android:textSize="18sp"
+	    	android:gravity="center"
+	    	android:background="#FFFFFFFF"
+	        />
+	    <Button
+	        android:id="@+id/dorm_check_begin_btn_tab03"
+			android:layout_width="0dp"
+	    	android:layout_height="wrap_content"
+	    	android:layout_weight="1"
+		    android:paddingTop="14dp"
+		    android:paddingBottom="14dp"
+	    	android:text="抽查"
+	    	android:textColor="#FF2784ea"
+	    	android:textSize="18sp"
+	    	android:gravity="center"
+	    	android:background="#FFFFFFFF"
+	        />
+	</LinearLayout>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="3dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal" >
+		<LinearLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="0dp"
+		    android:layout_weight="1"
+		    android:layout_margin="3dp"
+		    android:padding="5dp"
+		    android:orientation="vertical"
+		    android:background="#FFEEEEEE"
+		    android:gravity="center"
+		    android:onClick="onQrcode"
+		    >
+		    <ImageView
+		        android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+				android:src="@drawable/new_record_qrcode"
+				android:scaleType="fitCenter"
+				/>
+			<TextView
+			    android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_margin="5dp"
+			    android:text="扫描二维码获得寝室号"
+                android:textSize="20sp"
+			    android:textColor="#FF000000"
+			    />	
+		</LinearLayout>
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:padding="5dp"
+            android:orientation="vertical"
+            android:background="#FFEEEEEE"
+            android:gravity="center"
+            android:onClick="onManual"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/new_record_manual"
+                android:scaleType="fitCenter"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="手动输入一个寝室号"
+                android:textSize="20sp"
+                android:textColor="#FF000000"
+                />  
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+

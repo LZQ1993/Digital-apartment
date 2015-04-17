@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFFFF">
+   <!-- 添加导航 -->
+    <include layout="@layout/activity_nav_bar"/>
+   <!-- 提示 -->
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择一项查看学生详细信息"
+        android:textColor="#FF000000"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:background="#FFEEEEEE"
+        />
+	<ListView
+    	android:id="@+id/dorm_info_lv_mates"  
+    	android:layout_width="match_parent"
+    	android:layout_height="match_parent" 
+    	/>
+
+</LinearLayout>

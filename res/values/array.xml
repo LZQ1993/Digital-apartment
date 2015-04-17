@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- 楼号 -->
+    <string-array name="buildings">
+        <item>A1</item>
+        <item>A2</item>
+        <item>A3</item>
+        <item>A4</item>
+        <item>B1</item>
+        <item>B2</item>
+        <item>B3</item>
+        <item>B4</item>
+        <item>C1</item>
+        <item>C2</item>
+        <item>C3</item>
+        <item>D1</item>
+        <item>D2</item>
+        <item>D3</item>
+        <item>E1</item>
+        <item>E2</item>
+        <item>E3</item>
+        <item>E4</item>
+    </string-array>
+        <!-- 楼号 -->
+    <string-array name="dangerBuildings">
+        <item>未指定</item>
+        <item>A1</item>
+        <item>A2</item>
+        <item>A3</item>
+        <item>A4</item>
+        <item>B1</item>
+        <item>B2</item>
+        <item>B3</item>
+        <item>B4</item>
+        <item>C1</item>
+        <item>C2</item>
+        <item>C3</item>
+        <item>D1</item>
+        <item>D2</item>
+        <item>D3</item>
+        <item>E1</item>
+        <item>E2</item>
+        <item>E3</item>
+        <item>E4</item>
+    </string-array>
+    <!-- 违禁列表 -->
+    <string-array name="irrgularity">
+        <item>否</item>
+        <item>是</item>
+    </string-array>
+    
+     <!-- 寝室考核级别 -->
+	<string-array name="dormExamLevel">
+		<item>院大学生自律委员会</item>
+		<item>校大学生自律委员会</item>		
+		<item>院党员工作站</item>
+		<item>校党员工作站</item>
+		
+	</string-array>
+    
+	
+    <!-- 寝室考核类型 -->
+	<string-array name="dormExamType">
+		<item>普查</item>
+		<item>抽查</item>
+		<item>复查</item>
+	</string-array>
+
+	
+	    <!-- 寝室考核角色 -->
+	<string-array name="dormUser">
+	    <item>是</item>
+		<item>否</item>
+		
+	</string-array>
+	
+	  <!-- 考核学院 -->
+	<string-array name="dormCollege">
+		<item>未指定</item>
+		<item>电子与信息工程学院</item>
+		<item>安全科学与工程学院</item>
+		<item>电气与控制工程学院</item>
+		<item>工商管理学院</item>
+		<item>矿业技术学院</item>
+		<item>营销学院</item>
+		<item>软件学院</item>
+	</string-array>
+	
+	  <!-- 寝室考核等级 -->
+	<string-array name="dormYouChar">
+	    <item>全部</item>
+		<item>优</item>
+		<item>差</item>
+		<item>违规</item>
+	</string-array>
+	
+	
+	  <!-- 隐患查询类型 -->
+	<string-array name="dangerSearchType">
+	    <item>全部</item>
+	    <item>水</item>
+		<item>火</item>
+		<item>电</item>
+		<item>防盗</item>
+		<item>设施</item>
+		<item>设备</item>
+	</string-array>
+	<!-- 隐患申报类型 -->
+	<string-array name="dangerSubmitType">
+	    <item>未指定</item>
+	    <item>水</item>
+		<item>火</item>
+		<item>电</item>
+		<item>防盗</item>
+		<item>设施</item>
+		<item>设备</item>
+	</string-array>
+   <!-- 隐患状态 -->
+	<string-array name="dangerStatue">
+		<item>全部</item>
+		<item>未处理</item>
+		<item>已处理</item>
+	</string-array>
+	
+	  <!-- 通知类型 -->
+	<string-array name="noticeType">
+	    <item>未指定</item>
+	    <item>文体通知</item>
+		<item>学院通知</item>
+		<item>学校通知</item>
+	</string-array>
+	
+	   <!-- 通知状态 -->
+	<string-array name="noticeStatue">
+		<item>有效通知</item>
+		<item>无效通知</item>
+	</string-array>
+	
+    <!-- userType -->
+	<string-array name="userType">
+	    <item>未指定</item>
+		<item>院级学生干部</item>
+		<item>校级学生干部</item>
+		<item>班导师</item>
+		<item>辅导员</item>
+		<item>院领导</item>
+		<item>学生处</item>
+		<item>校职能处</item>
+		<item>校领导</item>
+	</string-array>
+</resources>

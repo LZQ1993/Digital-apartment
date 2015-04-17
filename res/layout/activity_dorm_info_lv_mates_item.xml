@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    
+    <!-- 床号 -->
+	<LinearLayout
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+    	android:gravity="bottom">
+		
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:paddingLeft="20dp"
+			android:paddingRight="10dp"
+			android:text="床号:"
+			android:textSize="12sp"
+			android:textColor="#FF555555"
+			android:gravity="left" />
+		
+		<TextView
+		    android:id="@+id/dorm_info_lv_mates_item_tv_bed"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:paddingTop="10dp"
+		    android:text="bed_num"
+		    android:textColor="#FF000000"
+		    android:textSize="13sp"
+		    android:gravity="left" />
+    </LinearLayout>
+    
+	<!-- 两列 -->
+	<LinearLayout
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:baselineAligned="false"
+    	android:orientation="horizontal">
+		
+	    <!-- 左列 -->
+	 	<LinearLayout
+	    	android:layout_width="0dp"
+	    	android:layout_height="wrap_content"
+	    	android:layout_weight="1"
+	    	android:orientation="vertical">
+
+	 	    <!-- 姓名 -->
+			<LinearLayout
+		    	android:layout_width="match_parent"
+		    	android:layout_height="wrap_content"
+		    	android:orientation="horizontal"
+		    	android:gravity="bottom">
+				
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="20dp"
+					android:paddingRight="10dp"
+					android:text="姓名:"
+					android:textSize="12sp"
+					android:textColor="#FF555555"
+					android:gravity="left" />
+				
+				<TextView
+				    android:id="@+id/dorm_info_lv_mates_item_tv_name"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:paddingTop="10dp"
+				    android:text="name"
+				    android:textColor="#FF000000"
+				    android:textSize="13sp"
+				    android:singleLine="true"
+				    android:gravity="left" />
+		    </LinearLayout>
+	 	    
+	 	   
+			<LinearLayout
+		    	android:layout_width="match_parent"
+		    	android:layout_height="wrap_content"
+		    	android:orientation="horizontal"
+		    	android:gravity="bottom">
+				
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="20dp"
+					android:paddingRight="10dp"
+					android:paddingBottom="10dp"
+					android:text="班级:"
+					android:textSize="12sp"
+					android:textColor="#FF555555"
+					android:gravity="left" />
+				
+				<TextView
+				    android:id="@+id/dorm_info_lv_mates_item_tv_class_info"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:paddingTop="10dp"
+					android:paddingBottom="10dp"
+				    android:text="class"
+				    android:textColor="#FF000000"
+				    android:textSize="13sp"
+				    android:singleLine="true"
+				    android:gravity="left" />
+		    </LinearLayout>
+		    
+	    </LinearLayout>
+	    
+	 	<!-- 右列 -->
+	    <LinearLayout
+	    	android:layout_width="0dp"
+	    	android:layout_height="wrap_content"
+	    	android:layout_weight="1"
+	    	android:orientation="vertical">
+	        
+	 	    
+			<LinearLayout
+		    	android:layout_width="match_parent"
+		    	android:layout_height="wrap_content"
+		    	android:orientation="horizontal"
+		    	android:gravity="bottom">
+				
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingRight="10dp"
+					android:text="职务:"
+					android:textSize="12sp"
+					android:textColor="#FF555555"
+					android:gravity="left" />
+				
+				<TextView
+					android:id="@+id/dorm_info_lv_mates_item_tv_post"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:paddingTop="10dp"
+				    android:text="无"
+				    android:textColor="#FF000000"
+				    android:textSize="13sp"
+				    android:singleLine="true"
+				    android:gravity="left" />
+		    </LinearLayout>
+	 	    
+	 
+			<LinearLayout
+		    	android:layout_width="match_parent"
+		    	android:layout_height="wrap_content"
+		    	android:orientation="horizontal"
+		    	android:gravity="bottom">
+				
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingRight="10dp"
+					android:paddingBottom="10dp"
+					android:text="政治面貌:"
+					android:textSize="12sp"
+					android:textColor="#FF555555"
+					android:gravity="left" />
+				
+				<TextView
+				    android:id="@+id/dorm_info_lv_mates_item_tv_face"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:paddingTop="10dp"
+					android:paddingBottom="10dp"
+				    android:text="无"
+				    android:textColor="#FF000000"
+				    android:textSize="13sp"
+				    android:singleLine="true"
+				    android:gravity="left" />
+		    </LinearLayout>
+
+	    </LinearLayout>
+
+	</LinearLayout>
+
+	<LinearLayout
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+    	android:gravity="bottom">
+
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="left"
+	        android:paddingRight="10dp"
+	        android:layout_marginLeft="15dp"
+	        android:text="班主任:"
+	        android:textColor="#FF555555"
+	        android:textSize="12sp" />
+
+	    <TextView
+	        android:id="@+id/dorm_info_lv_mates_item_tv_teacher"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="left"
+	        android:paddingBottom="10dp"
+	        android:paddingTop="10dp"
+	        android:singleLine="true"
+	        android:text="teacher"
+	        android:textColor="#FF000000"
+	        android:textSize="13sp" />
+	</LinearLayout>
+
+</LinearLayout>

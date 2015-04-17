@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" 
+    android:background="#FFFFFFFF">
+    
+    <!-- 添加导航 -->
+    <include layout="@layout/activity_nav_bar"/>
+
+	<!-- 滚屏滑动框架 -->
+	<ScrollView
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    >
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:paddingBottom="20dip"
+	        android:orientation="vertical"
+	        >
+			
+			<!-- 登录设置 -->
+			<TextView
+				android:layout_width="match_parent"
+		    	android:layout_height="30dip"
+		    	android:layout_marginBottom="5dip"
+		    	android:paddingLeft="20dip"
+		    	android:gravity="center_vertical"
+				android:textSize="16sp"
+				android:textColor="#FFFFFFFF"
+				android:background="#FFAAAAAA"
+				android:text="登录设置"
+				/>
+			
+			<!-- 记住密码 -->
+			<CheckBox 
+				android:id="@+id/setting_cb_autoLogin" 	
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+		    	android:layout_marginLeft="20dip"
+				android:checked="false"
+			    android:textColor="#FF2784ea"
+				android:text="记住密码"   
+				/>
+			
+			<!-- 二维码设置 -->
+			<TextView
+				android:layout_width="match_parent"
+		    	android:layout_height="30dip"
+		    	android:layout_marginTop="5dip"
+		    	android:layout_marginBottom="5dip"
+		    	android:paddingLeft="20dip"
+		    	android:gravity="center_vertical"
+				android:textSize="16sp"
+				android:textColor="#FFFFFFFF"
+				android:background="#FFAAAAAA"
+				android:text="二维码设置"
+				/>
+
+			<!-- 开启提示音 -->
+			<CheckBox 
+				android:id="@+id/setting_cb_qr_playBeepSound" 	
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+		    	android:layout_marginLeft="20dip"
+				android:checked="false"
+			    android:textColor="#FF2784ea"
+				android:text="开启提示音"   
+				/>
+			
+			<!-- 开启二维码振动 -->
+			<CheckBox 
+				android:id="@+id/setting_cb_qr_playVibrate" 	
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+		    	android:layout_marginLeft="20dip"
+				android:checked="false"
+			    android:textColor="#FF2784ea"
+				android:text="开启振动提示"   
+				/>
+			
+			<!-- 更新设置 -->
+			<TextView
+				android:layout_width="match_parent"
+		    	android:layout_height="30dip"
+		    	android:layout_marginTop="5dip"
+		    	android:layout_marginBottom="5dip"
+		    	android:paddingLeft="20dip"
+		    	android:gravity="center_vertical"
+				android:textSize="16sp"
+				android:textColor="#FFFFFFFF"
+				android:background="#FFAAAAAA"
+				android:text="更新设置"
+				/>
+		 	
+			<!-- 自动更新 -->
+			<CheckBox 
+				android:id="@+id/setting_cb_autoUpdate" 	
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+		    	android:layout_marginLeft="20dip"
+				android:checked="true"
+			    android:textColor="#FF2784ea"
+				android:text="自动更新"   
+				/>
+			
+			<!-- 更新检查 -->
+		 	<Button
+				android:layout_width="match_parent"
+				android:layout_height="50dip"
+				android:layout_marginLeft="20dip"
+				android:layout_marginRight="20dip"
+				android:text="更新检查"
+				android:background="@drawable/button"
+				android:textColor="#FF2784ea"
+				android:onClick="checkUpdate"
+				/>
+		 	
+		 
+		 	
+	    </LinearLayout> 
+	</ScrollView>
+
+</LinearLayout>
+

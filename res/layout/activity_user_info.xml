@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" 
+    android:background="#FFFFFFFF">
+    
+    <!-- 添加导航 -->
+    <include layout="@layout/activity_nav_bar"/>
+
+	<!-- 滚屏滑动框架 -->
+	<ScrollView
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    >
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:padding="20dip"
+	        android:orientation="vertical"
+	        >
+	        
+	       	<!-- 图标 -->
+			<LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical"
+		        android:gravity="center_vertical"
+		        >
+				<!-- 图标 -->
+
+				<ImageView
+				    android:id="@+id/user_info_iv_userphoto"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:src="@drawable/accountlogo" 
+				    android:layout_gravity="center"/>
+		        
+				<!-- 基本信息 -->
+
+				<LinearLayout
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_marginTop="20dp"
+				    android:gravity="left"
+				    android:orientation="vertical" >
+					<TextView
+				        android:id="@+id/user_info_tv_usernum"
+				        android:layout_width="match_parent"
+				        android:layout_height="wrap_content"
+				        android:layout_margin="3dip"
+				        android:text="用户编号:01"
+				        android:textColor="#FF000000"
+				        android:textSize="18sp" />
+				    <TextView
+				        android:id="@+id/user_info_tv_username"
+				        android:layout_width="match_parent"
+				        android:layout_height="wrap_content"
+				        android:layout_margin="3dip"
+				        android:text="用户昵称:TakWolf"
+				        android:textColor="#FF000000"
+				        android:textSize="18sp" />
+
+				    <TextView
+				        android:id="@+id/user_info_tv_userrealname"
+				        android:layout_width="match_parent"
+				        android:layout_height="wrap_content"
+				        android:layout_margin="3dip"
+				        android:text="真实姓名：张洋"
+				        android:textColor="#FF000000"
+				        android:textSize="18sp" />
+
+				    <TextView
+				        android:id="@+id/user_info_tv_usertype"
+				        android:layout_width="match_parent"
+				        android:layout_height="wrap_content"
+				        android:layout_margin="3dip"
+				        android:text="帐号类型:校大学生自律委员会"
+				        android:textColor="#FF000000"
+				        android:textSize="18sp" />
+
+				    <TextView
+				        android:id="@+id/user_info_tv_college"
+				        android:layout_width="match_parent"
+				        android:layout_height="wrap_content"
+				        android:layout_margin="3dip"
+				        android:text="帐号所属：电子与信息工程学院"
+				        android:textColor="#FF000000"
+				        android:textSize="18sp" />
+				    <TextView
+				        android:id="@+id/user_info_tv_opentime"
+				        android:layout_width="match_parent"
+				        android:layout_height="wrap_content"
+				        android:layout_margin="3dip"
+				        android:text="开启时间：2014/10/10"
+				        android:textColor="#FF000000"
+				        android:textSize="18sp" />
+				</LinearLayout>
+
+			 </LinearLayout>
+	        
+	       	<!-- 其他功能占位 -->
+			<LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal"
+		        android:gravity="center_vertical"
+		        >
+				
+			    <!-- 待填充 -->
+
+			 </LinearLayout>
+	        
+			<!-- 注销登录 -->
+		 	<Button
+				android:layout_width="match_parent"
+				android:layout_height="50dip"
+				android:layout_marginTop="20dip"
+				android:text="修改密码"
+				android:onClick="modify"
+				android:background="@drawable/button"
+				android:textColor="#FF2784ea"
+				/>
+		 	 <Button
+				android:layout_width="match_parent"
+				android:layout_height="50dip"
+				android:layout_marginTop="10dip"
+				android:text="编辑账户"
+				android:onClick="edit"
+				android:background="@drawable/button"
+				android:textColor="#FF2784ea"
+				/>
+		 	 <Button
+				android:layout_width="match_parent"
+				android:layout_height="50dip"
+				android:layout_marginTop="10dip"
+				android:text="注销登录"
+				android:onClick="logOut"
+				android:background="@drawable/button"
+				android:textColor="#FFFF0000"
+				/>
+		 	
+	    </LinearLayout> 
+	</ScrollView>
+
+</LinearLayout>
+
+

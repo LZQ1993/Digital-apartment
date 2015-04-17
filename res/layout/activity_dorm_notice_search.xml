@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFFFF"
+     >
+    
+	<!-- 添加导航 -->
+    <include layout="@layout/activity_nav_bar"/>
+         
+    <!-- 提示 -->
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="请输入查询通知的条件"
+        android:textColor="#FF000000"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:background="#FF99FF99"
+        />
+  
+    	    >
+    <!-- 条件 -->
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+		android:paddingBottom="10dp"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+        >
+        
+	    <!-- 通知类型 -->
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_marginTop="10dp"
+	        android:gravity="center_vertical"
+	        >
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+			    android:text="通知类型："
+				android:textColor="#FF2784ea"
+				android:textSize="16sp"
+				/>
+		    <Spinner
+				android:id="@+id/dorm_notice_search_type_spn"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:entries="@array/noticeType"
+				style="@android:style/Widget.Holo.Light.Spinner"
+				/>
+	    </LinearLayout>
+	   
+         <!-- 通知状态 -->
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	         android:layout_marginTop="10dp"
+	        android:gravity="center_vertical"
+	        >
+			<TextView 
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+			    android:text="通知状态："
+				android:textColor="#FF2784ea"
+				android:textSize="16sp"
+				/>
+		    <Spinner
+				android:id="@+id/dorm_notice_search_state_spn"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:entries="@array/noticeStatue"
+				style="@android:style/Widget.Holo.Light.Spinner"
+				/>
+	    </LinearLayout>
+    </LinearLayout>
+   <LinearLayout  
+	        android:layout_width="fill_parent"  
+	        android:layout_height="wrap_content" 
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp" 
+	        android:layout_marginTop="10dp"
+	        android:orientation="horizontal" >  
+	  
+	      <EditText 
+	          android:id="@+id/showdate" 
+	          android:layout_width="wrap_content"
+	          android:layout_weight="3" 
+	          android:layout_height="wrap_content"
+	          android:hint="请选择截止时间"
+	          /> 
+		 <Button  
+	            android:id="@+id/btnDate" 
+	            android:layout_weight="1"  
+	            android:layout_width="wrap_content"  
+	            android:layout_height="wrap_content" 
+	            android:onClick="data"
+	            android:background="@drawable/button"
+				android:textColor="#FF2784ea"
+	            android:text="选择日期" 
+	            />
+	    </LinearLayout>
+        <!-- 内容布局 -->
+	    <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginTop="15dp"
+		    android:paddingLeft="10dip"
+		    android:paddingRight="10dip"
+		    android:orientation="vertical"
+		    android:focusable="true"  
+   			android:focusableInTouchMode="true"
+		    >
+			<!-- 输入框 -->
+			<EditText
+			    android:id="@+id/dorm_notice_search_keyWords_edt"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:hint="请输入关键字"
+			    android:inputType="textMultiLine"
+			    android:gravity="top"
+			    android:textSize="16sp"
+			    android:maxLength="300"
+			    android:minLines="4"
+			    />
+			</LinearLayout>
+    
+      <!-- 提交按钮 -->
+
+	<Button
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="5dip"
+	    android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp"
+	    android:onClick="noticeSearch"
+	    android:background="@drawable/button"
+		android:textColor="#FF2784ea"
+	    android:text="查询" />
+       
+</LinearLayout>

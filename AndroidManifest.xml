@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.chinawit.scloud"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+  
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+    <!-- 网络访问权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 二维码权限 -->
+  	<uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!-- 设备状态查看权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- 打电话权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+     <!-- 全局应用 -->
+    <application
+        android:name="com.chinawit.scloud.app.App"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
+
+        <activity
+            android:name="com.chinawit.scloud.StartupActivity"
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- 主要界面 -->
+        <activity
+            android:name="com.chinawit.scloud.MainActivity"
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.chinawit.scloud.IntroActivity"
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+        	android:name="com.chinawit.scloud.LoginActivity"
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+         <activity
+        	android:name="com.chinawit.scloud.AboutActivity"
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+         <activity
+        	android:name="com.chinawit.scloud.SettingActivity"
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+          <activity
+        	android:name="com.chinawit.scloud.UpdateLogActivity"
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+           <activity
+        	android:name="com.chinawit.scloud.BugFeedbackActivity"
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+           <activity
+        	android:name="com.chinawit.scloud.UserInfoActivity"
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize"/>        
+           <activity
+        	android:name="com.chinawit.scloud.RegisterActivity"
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+           <activity
+        	android:name="com.chinawit.scloud.EditActivity"
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+           <activity
+        	android:name="com.chinawit.scloud.ModifyPasswordActivity"
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        
+        <!-- 门牌扫描器 -->
+        <activity
+            android:name="com.chinawit.scloud.dormPlate.DormPlateMainActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.chinawit.scloud.dormPlate.CaptureActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        
+        <!-- 寝室查询 -->
+        <activity 
+            android:name="com.chinawit.scloud.dormSearch.DormSearchMainActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity 
+            android:name="com.chinawit.scloud.dormSearch.DormInfoActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity 
+            android:name="com.chinawit.scloud.dormSearch.DormListActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity 
+            android:name="com.chinawit.scloud.dormSearch.StudentInfoActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity 
+            android:name="com.chinawit.scloud.dormSearch.TeacherInfoActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+         <activity 
+            android:name="com.chinawit.scloud.dormSearch.DormGridActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+         <activity 
+            android:name="com.chinawit.scloud.dormSearch.StudentCallActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+         <activity 
+            android:name="com.chinawit.scloud.dormSearch.DormNameActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        
+        <!-- 寝室考核 -->
+        <activity 
+            android:name="com.chinawit.scloud.dromCheck.DormCheckMainActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity 
+            android:name="com.chinawit.scloud.dromCheck.DormCheckBeginActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity 
+            android:name="com.chinawit.scloud.dromCheck.DormCheckNewRecordActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        
+        
+        <!-- 评比查询 -->
+        <activity 
+            android:name="com.chinawit.scloud.dormScore.DormScoreMainActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity 
+            android:name="com.chinawit.scloud.dormScore.DormScoreAdvancedActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity 
+            android:name="com.chinawit.scloud.dormScore.DormScoreInfoActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity 
+            android:name="com.chinawit.scloud.dormScore.DormScoreShowActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity 
+            android:name="com.chinawit.scloud.dormScore.DormScoreAdvancedInfoActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <!-- 申诉平台 -->
+        <activity 
+            android:name="com.chinawit.scloud.dormCall.DormCallMainActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        
+        <!-- 隐患提报 -->
+        <activity 
+            android:name="com.chinawit.scloud.dormDanger.DormDangerMainActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity 
+            android:name="com.chinawit.scloud.dormDanger.DormDangerSubmitActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity 
+            android:name="com.chinawit.scloud.dormDanger.DormDangerSearchInfoActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity 
+            android:name="com.chinawit.scloud.dormDanger.DormDangerSearchActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity 
+            android:name="com.chinawit.scloud.dormDanger.DormDangerSearchShowActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        
+         <!-- 寝室通知 -->
+        <activity 
+            android:name="com.chinawit.scloud.dormNotice.DormNoticeMainActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity 
+            android:name="com.chinawit.scloud.dormNotice.DormNoticeSubmitActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity 
+            android:name="com.chinawit.scloud.dormNotice.DormNoticeSearchActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity 
+            android:name="com.chinawit.scloud.dormNotice.DormNoticeSearchInfoShowActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity 
+            android:name="com.chinawit.scloud.dormNotice.DormNoticeSearchInfoActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+            
+    </application>
+
+
+</manifest>

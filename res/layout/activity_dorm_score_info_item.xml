@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+	<!-- 两列 -->
+	<LinearLayout
+    	android:layout_width="match_parent"
+    	android:layout_height="80dp"
+    	android:baselineAligned="false"
+    	android:orientation="horizontal">
+		
+	    <!-- 左列 -->
+	 	<LinearLayout
+	    	android:layout_width="0dp"
+	    	android:layout_height="wrap_content"
+	    	android:layout_marginTop="10dp"
+	    	android:layout_weight="1"
+	    	android:orientation="vertical">
+
+	 	    <!--  周次-->
+			<LinearLayout
+		    	android:layout_width="match_parent"
+		    	android:layout_height="wrap_content"
+		    	android:orientation="horizontal"
+		    	android:gravity="bottom">
+				
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="20dp"
+					android:paddingRight="10dp"
+					android:text="周次:"
+					android:textSize="20sp"
+					android:textColor="#FF555555"
+					android:gravity="left" />
+				
+				<TextView
+				    android:id="@+id/dorm_score_info_lv_item_tv_week"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:paddingTop="10dp"
+				    android:text="00"
+				    android:textColor="#FF000000"
+				    android:textSize="20sp"
+				    android:singleLine="true"
+				    android:gravity="left" />
+		    </LinearLayout>    
+	    </LinearLayout>
+	    
+	 	<!-- 中列 -->
+	    <LinearLayout
+	    	android:layout_width="0dp"
+	    	android:layout_height="wrap_content"
+	    	android:layout_marginTop="10dp"
+	    	android:layout_weight="1"
+	    	android:orientation="vertical">
+	        
+	 	    
+			<LinearLayout
+		    	android:layout_width="match_parent"
+		    	android:layout_height="wrap_content"
+		    	android:orientation="horizontal"
+		    	android:gravity="bottom">
+				
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingRight="10dp"
+					android:text="总得分:"
+					android:textSize="20sp"
+					android:textColor="#FF555555"
+					android:gravity="left" />
+				
+				<TextView
+					android:id="@+id/dorm_score_info_lv_item_tv_allScore"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:paddingTop="10dp"
+				    android:text="无"
+				    android:textColor="#FF000000"
+				    android:textSize="20sp"
+				    android:singleLine="true"
+				    android:gravity="left" />
+		    </LinearLayout>
+	 	  </LinearLayout> 
+
+ 	 </LinearLayout>
+</LinearLayout>

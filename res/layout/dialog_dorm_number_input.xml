@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+	android:orientation="vertical"
+    android:background="#FFFFFFFF">
+
+	<TextView 
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="请输入寝室号码，例如：A1-101"
+		android:textColor="#FF000000"
+		android:textSize="16sp"
+		android:paddingTop="5dp"
+		android:paddingBottom="5dp"
+		android:paddingLeft="20dp"
+		/>
+	    
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp"
+		android:orientation="horizontal"
+		android:gravity="center_vertical"
+		>
+		<Spinner
+			android:id="@+id/dialog_dorm_number_input_spn_dormNum"
+			android:layout_width="100dp"
+			android:layout_height="wrap_content"
+			android:entries="@array/buildings"
+			style="@android:style/Widget.Holo.Light.Spinner"
+			android:textColor="#FF2784ea"
+			/>
+		<TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+	        android:layout_marginLeft="4dp"
+		    android:layout_marginRight="4dp"
+	        android:text="-"
+	        android:textColor="#FF000000"		        
+	        android:textSize="24sp"
+		    android:gravity="center"
+		    />
+		<EditText
+		    android:id="@+id/dialog_dorm_number_input_edt_dormNum"
+		    android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:inputType="number"
+	        android:maxLength="3"
+		    />	    
+	</LinearLayout>
+
+</LinearLayout>

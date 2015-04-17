@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#FFFFFFFF" >
+
+    <!-- 添加导航 -->
+    <include layout="@layout/activity_nav_bar"/>
+        
+    <!-- 帧布局 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+    
+        <!-- 扫描器界面层1 -->    
+        <SurfaceView 
+            android:id="@+id/capture_sv_cameraPreview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+        
+        <!-- 外框按钮层2 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_alignParentTop="true"
+                android:text="请将二维码置于摄像头取景范围内"
+                android:textColor="#FF005d6e"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:background="#FFEAEAEA"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:background="#FFD3D3D3"
+                >
+                <ImageButton
+                    android:id="@+id/capture_imBtn_light"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/qb_scan_btn_flash_nor"
+                    android:background="#00000000"
+                    android:scaleType="fitCenter"
+                    android:onClick="onButtonLightClick"
+                    />
+                <TextView
+                    android:id="@+id/capture_tv_light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开灯"
+                    android:textColor="#00111111"
+                    android:textSize="16sp"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
