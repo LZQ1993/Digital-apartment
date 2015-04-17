@@ -266,7 +266,7 @@ public class DormScoreAdvancedActivity extends NavBarActivity {
 	                } catch (Exception e) {
 	    	            	new AlertDialog.Builder(DormScoreAdvancedActivity.this)    
 	    	                .setTitle("错误")  
-	    	                .setMessage("数据解析异常")  
+	    	                .setMessage("服务器返回：" + content)  
 	    	                .setPositiveButton("确定", null)
 	    	                .show();    	           		        
 	                	    return;
@@ -334,7 +334,7 @@ public class DormScoreAdvancedActivity extends NavBarActivity {
                 } catch (Exception e) {
     	            	new AlertDialog.Builder(DormScoreAdvancedActivity.this)    
     	                .setTitle("错误")  
-    	                .setMessage("数据解析异常")  
+    	                .setMessage("服务器返回：" + content)  
     	                .setPositiveButton("确定", null)
     	                .show();    	           
 	        		//清除班级
@@ -410,7 +410,7 @@ public class DormScoreAdvancedActivity extends NavBarActivity {
                 } catch (Exception e) {
 	            	new AlertDialog.Builder(DormScoreAdvancedActivity.this)    
 	                .setTitle("错误")  
-	                .setMessage("数据解析异常")  
+	                .setMessage("服务器返回：" + content)  
 	                .setPositiveButton("确定", null)
 	                .show();
 	            	//清除学院
@@ -517,7 +517,7 @@ public class DormScoreAdvancedActivity extends NavBarActivity {
                 } catch (Exception e) {
 	            	new AlertDialog.Builder(DormScoreAdvancedActivity.this)    
 	                .setTitle("错误")  
-	                .setMessage("数据解析异常")  
+	                .setMessage("服务器返回：" + content)  
 	                .setPositiveButton("确定", null)
 	                .show();
                 	return;
