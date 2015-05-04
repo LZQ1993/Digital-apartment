@@ -128,16 +128,15 @@ some parent container.
         public static final int password=0x7f02002c;
         public static final int qb_scan_btn_flash_down=0x7f02002d;
         public static final int qb_scan_btn_flash_nor=0x7f02002e;
-        public static final int qr_capture_bg=0x7f02002f;
-        public static final int qr_capture_intro=0x7f020030;
-        public static final int qr_capture_warning=0x7f020031;
-        public static final int realname=0x7f020032;
-        public static final int startup_bg=0x7f020033;
-        public static final int startup_logo=0x7f020034;
-        public static final int startup_team=0x7f020035;
-        public static final int tel=0x7f020036;
-        public static final int usertype=0x7f020037;
-        public static final int year=0x7f020038;
+        public static final int qr_capture_intro=0x7f02002f;
+        public static final int qr_capture_warning=0x7f020030;
+        public static final int realname=0x7f020031;
+        public static final int startup_bg=0x7f020032;
+        public static final int startup_logo=0x7f020033;
+        public static final int startup_team=0x7f020034;
+        public static final int tel=0x7f020035;
+        public static final int usertype=0x7f020036;
+        public static final int year=0x7f020037;
     }
     public static final class id {
         public static final int about_nav=0x7f0a0000;

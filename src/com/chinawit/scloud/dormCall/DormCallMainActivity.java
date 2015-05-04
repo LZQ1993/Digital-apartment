@@ -4,14 +4,7 @@ import java.io.InputStream;
 
 import org.apache.http.util.EncodingUtils;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.DialogInterface.OnClickListener;
-import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.chinawit.scloud.NavBarActivity;
